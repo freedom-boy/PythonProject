@@ -3,10 +3,11 @@
 #作者:Paul哥
 import urllib2,os,cookielib
 
-class Login():
+class Login:
 
 	def __init__(self):
 
+		self.indexurl='https://kyfw.12306.cn/otn/login/init'
 		self.accessHeaders={
 			'Host': 'kyfw.12306.cn',
 			'Connection': 'keep-alive',
@@ -19,30 +20,25 @@ class Login():
 
 		}
 
-			self.post={
-
-
-			}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-			self.username='mymicheel'
-			self.password='Hello123'
-			self.cookie=cookielib.LWPCookieJar()
-			self.cookieHandler=urllib2.HTTPCookieProcessor(self.cookie)
-			self.opener=urllib2.build_opener(self.cookieHandler,urllib2.HTTPHandler)
+		self.username='mymicheel'
+		self.password='Hello123'
+		self.cookie=cookielib.LWPCookieJar()
+		self.cookieHandler=urllib2.HTTPCookieProcessor(self.cookie)
+		self.opener=urllib2.build_opener(self.cookieHandler,urllib2.HTTPHandler)
 
 
 	def GetUrl(self):
+		request=urllib2.Request(self.indexurl,headers=self.accessHeaders)
+		response=urllib2.urlopen(request)
+		print response.read()
+
+
+
+if __name__=='__main__':
+	test=Login()
+	test.GetUrl()
