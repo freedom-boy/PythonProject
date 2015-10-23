@@ -19,4 +19,30 @@ class Login():
 
 		}
 
+			self.post={
+
+
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			self.username='mymicheel'
+			self.password='Hello123'
+			self.cookie=cookielib.LWPCookieJar()
+			self.cookieHandler=urllib2.HTTPCookieProcessor(self.cookie)
+			self.opener=urllib2.build_opener(self.cookieHandler,urllib2.HTTPHandler)
+
+
 	def GetUrl(self):
