@@ -6,6 +6,7 @@ import urllib2,os,cookielib
 class Login():
 
 	def __init__(self):
+
 		self.accessHeaders={
 			'Host': 'kyfw.12306.cn',
 			'Connection': 'keep-alive',
@@ -17,3 +18,5 @@ class Login():
 			'Accept-Language': 'zh-CN,zh;q=0.8'
 
 		}
+
+	def GetUrl(self):
