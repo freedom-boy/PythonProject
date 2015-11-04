@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 #_*_coding:utf-8_*_
 #作者:Paul哥
-import urllib2,os,cookielib,ssl,random,urllib
+import urllib2,cookielib,random,urllib
 from PIL import Image
-from Cookie import BaseCookie
-
 
 class Login:
 
@@ -86,7 +84,7 @@ class Login:
 		response=urllib2.urlopen(request)
 		return response
 
-	
+
 
 
 
