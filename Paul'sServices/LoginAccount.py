@@ -34,21 +34,23 @@ class Login:
 		self.Imagesuffix=random.random()
 		self.ImageUrl='https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew?module=login&rand=sjrand&'+str(self.Imagesuffix)
 
-	def GetCodeImage(self):
+	def GetCodeImage(self): #获取验证码并取得cookie
 		request=urllib2.Request(self.ImageUrl,headers=self.accessHeaders)
-		response=urllib2.urlopen(request)
-		codeimage=response.read()
-		file=open('code.jpg','wb')
-		file.write(codeimage)
-		file.flush()
-		file.close()
+		try:
+			response=urllib2.urlopen(request)
+			codeimage=response.read()
+			file=open('code.jpg','wb')
+			file.write(codeimage)
+			file.flush()
+			file.close()
+			return 'GetImageSuccess'
+		except:
+			return 'GetImageFailure'
+
+
+	def PostLoginInfo(self): #检测验证码是否正确
 		img=Image.open('code.jpg')
 		img.show()
-
-		return self.cookie
-
-
-	def PostLoginInfo(self):
 		codestr=''
 		Input=raw_input('Please input code number:')
 		for i in Input:
@@ -58,31 +60,25 @@ class Login:
 
 		data={"randCode":str(codestr),"rand":'sjrand'}
 		data=urllib.urlencode(data)
-		print data
+		#print data
 		request=urllib2.Request(self.checkcodeurl,headers=self.accessHeaders,data=data)
 		response=urllib2.urlopen(request)
-		print response.read()
+		#print response.read()
 		return str(codestr)
 
-	def StartLogin(self,codestr):
-		username=raw_input('Please input your username:')
-		password=raw_input('Please input your password:')
+	def StartLogin(self,codestr,username,password): #检测用户名密码和验证码对错
+
 		data={"loginUserDTO.user_name":username,"userDTO.password":password,"randCode":codestr}
 		postdata=urllib.urlencode(data)
-		print postdata
+		#print postdata
 		request=urllib2.Request(self.loginurl,headers=self.accessHeaders,data=postdata)
 		response=urllib2.urlopen(request)
 
-		request1=urllib2.Request(self.userlogin,headers=self.accessHeaders,data='{"_json_att":''}')
-		response1=urllib2.urlopen(request1)
 		request2=urllib2.Request('https://kyfw.12306.cn/otn/index/initMy12306',headers=self.accessHeaders)
 		response3=urllib2.urlopen(request2)
 		print response3.read()
 
-	def access12306(self,halfurl):
-		request=urllib2.Request(url=self.mainurl+halfurl,headers=self.accessHeaders)
-		response=urllib2.urlopen(request)
-		return response
+
 
 
 
