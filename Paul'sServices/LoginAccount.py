@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 #_*_coding:utf-8_*_
 #作者:Paul哥
-import urllib2,cookielib,random,urllib
+import urllib2,cookielib,random,urllib,json
 from PIL import Image
-
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 class Login:
 
 	def __init__(self):
@@ -45,7 +46,7 @@ class Login:
 			file.close()
 			return 'GetImageSuccess'
 		except:
-			return 'GetImageFailure'
+			return 'GetImageError'
 
 
 	def PostLoginInfo(self): #检测验证码是否正确
@@ -56,24 +57,28 @@ class Login:
 		for i in Input:
 			codestr=codestr + self.codedict[i]+','
 
-		codestr=codestr[:-1]
-
-		data={"randCode":str(codestr),"rand":'sjrand'}
+		coderesult=codestr[:-1]
+		global coderesult
+		data={"randCode":str(coderesult),"rand":'sjrand'}
 		data=urllib.urlencode(data)
 		#print data
 		request=urllib2.Request(self.checkcodeurl,headers=self.accessHeaders,data=data)
 		response=urllib2.urlopen(request)
-		#print response.read()
-		return str(codestr)
+		responsedict=json.loads(response.read())
+		if responsedict["data"]["result"]=='1':
+			return 'checkcodeTrue'
+		else:
+			return 'checkcodeFalse'
 
-	def StartLogin(self,codestr,username,password): #检测用户名密码和验证码对错
-
-		data={"loginUserDTO.user_name":username,"userDTO.password":password,"randCode":codestr}
+	def StartLogin(self): #检测用户名密码和验证码对错
+		username=raw_input('Please input your username:')
+		password=raw_input('Please input your password:')
+		data={"loginUserDTO.user_name":username,"userDTO.password":password,"randCode":coderesult}
 		postdata=urllib.urlencode(data)
 		#print postdata
 		request=urllib2.Request(self.loginurl,headers=self.accessHeaders,data=postdata)
 		response=urllib2.urlopen(request)
-
+		print response.read()
 		request2=urllib2.Request('https://kyfw.12306.cn/otn/index/initMy12306',headers=self.accessHeaders)
 		response3=urllib2.urlopen(request2)
 		print response3.read()

@@ -7,3 +7,4 @@ class QueryTrain:
 
 	def __init__(self):
 
+
