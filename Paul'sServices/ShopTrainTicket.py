@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 #_*_coding:utf-8_*_
 #作者:Paul哥
-import urllib2,cookielib,random,urllib,thread
+import urllib2,cookielib,random,urllib
 import LoginAccount
-from time import sleep
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 LoginRun=LoginAccount.Login()
-from PIL import Image
+
+from bs4 import BeautifulSoup
 
 class ShopTicket:
 
@@ -38,8 +41,8 @@ class ShopTicket:
 		urllib2.install_opener(self.opener)
 
 	def inputuserandpasswd(self):
-		username=raw_input('Please input your username:')
-		password=raw_input('Please input your password:')
+		username=raw_input('请输入您的用户名:')
+		password=raw_input('请输入您的密码:')
 		userpassdict={'user':username,'passwd':password}
 		return userpassdict
 
@@ -52,17 +55,35 @@ class ShopTicket:
 					break
 				else:
 					pass
-			coodestr=LoginRun.PostLoginInfo()
-			if coodestr=='checkcodeTrue':
-				print 'Checkcode is True'
+			codestrcookies=LoginRun.PostLoginInfo()
+			if codestrcookies!='checkcodeFalse':
+				print '验证码输入正确'
 				break
-			elif coodestr=='checkcodeFalse':
+			else:
+				print "不好意思，验证码错误，请重试"
 				continue
 
+		data={"loginUserDTO.user_name":userpass['user'],"userDTO.password":userpass['passwd'],"randCode":str(codestrcookies['checkcodeTrue'])}
+		postdata=urllib.urlencode(data)
+		request=urllib2.Request(self.checkloginurl,headers=self.accessHeaders,data=postdata)
+		checkresponse=urllib2.urlopen(request)
+		print '用户名及密码正确'
+		request2=urllib2.Request(self.loginurl,headers=self.accessHeaders)
+		loginresponse=urllib2.urlopen(request2)
+		html=loginresponse.read()
+		# file=open('login.html','wb')
+		# file.write(html)
+		# file.close()
+		soup=BeautifulSoup(html,'lxml')
+		loginstatus=str(soup.p)
+
+		if loginstatus[3:18]=='欢迎您登录':
+			print '恭喜您登陆成功'
+		return 'LoginSuccess'
 
 
 
-		return userpass
+
 
 
 
@@ -87,7 +108,7 @@ class ShopTicket:
 		print "1.Buy trainticket"
 		print "2.With old liu goint to BigBaoJian "
 		print "3.With oil brother going to learning ControlGirl'sThought"
-		ServiceNum=input('Please input number:')
+		ServiceNum=input('请输入任务数字:')
 		if ServiceNum==1:
 			a=self.login()
 

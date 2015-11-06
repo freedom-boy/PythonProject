@@ -44,6 +44,8 @@ class Login:
 			file.write(codeimage)
 			file.flush()
 			file.close()
+
+
 			return 'GetImageSuccess'
 		except:
 			return 'GetImageError'
@@ -53,35 +55,38 @@ class Login:
 		img=Image.open('code.jpg')
 		img.show()
 		codestr=''
-		Input=raw_input('Please input code number:')
+		Input=raw_input('请输入验证码数字:')
 		for i in Input:
 			codestr=codestr + self.codedict[i]+','
 
 		coderesult=codestr[:-1]
-		global coderesult
 		data={"randCode":str(coderesult),"rand":'sjrand'}
 		data=urllib.urlencode(data)
 		#print data
 		request=urllib2.Request(self.checkcodeurl,headers=self.accessHeaders,data=data)
 		response=urllib2.urlopen(request)
 		responsedict=json.loads(response.read())
+		resultdict={'checkcodeTrue':coderesult}
 		if responsedict["data"]["result"]=='1':
-			return 'checkcodeTrue'
+
+			return resultdict
 		else:
+
 			return 'checkcodeFalse'
 
 	def StartLogin(self): #检测用户名密码和验证码对错
 		username=raw_input('Please input your username:')
 		password=raw_input('Please input your password:')
-		data={"loginUserDTO.user_name":username,"userDTO.password":password,"randCode":coderesult}
+		data={"loginUserDTO.user_name":username,"userDTO.password":password,"randCode":str(self.PostLoginInfo()['checkcodeTrue'])}
 		postdata=urllib.urlencode(data)
 		#print postdata
 		request=urllib2.Request(self.loginurl,headers=self.accessHeaders,data=postdata)
 		response=urllib2.urlopen(request)
 		print response.read()
-		request2=urllib2.Request('https://kyfw.12306.cn/otn/index/initMy12306',headers=self.accessHeaders)
-		response3=urllib2.urlopen(request2)
-		print response3.read()
+
+		# request2=urllib2.Request('https://kyfw.12306.cn/otn/index/initMy12306',headers=self.accessHeaders)
+		# response3=urllib2.urlopen(request2)
+		# print response3.read()
 
 
 
@@ -102,5 +107,5 @@ class Login:
 if __name__=='__main__':
 	test=Login()
 	test.GetCodeImage()
-	codestr=test.PostLoginInfo()
-	test.StartLogin(codestr)
+	#test.PostLoginInfo()
+	test.StartLogin()
