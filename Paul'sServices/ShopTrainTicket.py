@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #_*_coding:utf-8_*_
 #作者:Paul哥
-import urllib2,cookielib,random,urllib,json,time,re
+import urllib2,cookielib,random,urllib,json,time,re,datetime
 import LoginAccount,TrainNumQuery,BookingSeat
 from PIL import Image
 from PIL import ImageFont
@@ -176,10 +176,7 @@ class ShopTicket:
             return 'LoginSuccess'
 
 
-    def Query(self):
-        FromST=raw_input('请输入您的出发站:')
-        ToST=raw_input('请输入您的到达站:')
-        Startdate=raw_input('请输入您的出发日期（8位数字）:')
+    def Query(self,FromST,ToST,Startdate):
         queryurl=TrainQuery.CreateUrl(FromST,ToST,Startdate)
         for i in range(3):
             trainnum=TrainQuery.GetTrainNumDate(queryurl)
@@ -336,9 +333,75 @@ class ShopTicket:
         tour_flag='dc'
         data={"cancel_flag":cancel_flag,"bed_level_order_num":bed_level_order_num,"passengerTicketStr":passengerTicketStr,"oldPassengerStr":oldPassengerStr,"tour_flag":tour_flag,"randCode":bookincodestr,"REPEAT_SUBMIT_TOKEN":token,"_json_att":""}
         postdata=json.dumps(data)
+        print "This check order info postdata",postdata
         return postdata
 
-    def GetCheckQueueCountInfo(self):
+    def GetCheckQueueCountInfo(self,startdate,checkresult,token,seatstr):
+        Weekdict={'1':"Mon",'2':"Tue","3":"Wed","4":"Thu","5":"Fri","6":"Sat","7":"Sun"}
+        Monthdict={"01":"Jan","02":"Feb","03":"Mar","04":"Apr","05":"May","06":"Jun","07":"Jul","08":"Aug","09":"Sep","10":"Oct","11":"Nov","12":"Dec"}
+        year=startdate[0:4]
+        month=startdate[4:6]
+        day=startdate[6:8]
+        anyday=datetime.datetime(int(year),int(month),int(day)).strftime("%w")
+        weekday=Weekdict[str(anyday)]
+        monthstr=Monthdict[month]
+        train_date=weekday+" "+monthstr+" "+day+" "+year+" "+"00:00:00 GMT+0800 (中国标准时间)"
+
+
+        orderRequestDTO = re.search(r'var orderRequestDTO\=(.*?)\;',checkresult,re.DOTALL)
+        orderRequeststr=orderRequestDTO.group(1)
+        orderRequeststr = orderRequeststr.replace("'","\"")
+        orderRequeststrjson=orderRequeststr.replace("null","\"null\"")
+        orderRequestDTOdict=json.loads(orderRequeststrjson)
+        train_num=orderRequestDTOdict['train_no']
+        stationTrainCode=orderRequestDTOdict['station_train_code']
+        fromStationTelecode=orderRequestDTOdict['from_station_telecode']
+        tostationtelecode=orderRequestDTOdict['to_station_telecode']
+
+
+        InfoForPassenger= re.search(r'var ticketInfoForPassengerForm\=(.*?)\;',checkresult,re.DOTALL)
+        InfoForPassengerstr=InfoForPassenger.group(1)
+        InfoForPassengerstr = InfoForPassengerstr.replace("'","\"")
+        InfoForPassengerjson=InfoForPassengerstr.replace("null","\"null\"")
+        InfoForPassengerdict=json.loads(InfoForPassengerjson)
+        leftTicket=InfoForPassengerdict['leftTicketStr']
+        purpose_codes=InfoForPassengerdict['purpose_codes']
+
+
+        data={"train_date":train_date,"train_no":train_num,"stationTrainCode":stationTrainCode,"seatType":seatstr,"fromStationTelecode":fromStationTelecode,"toStationTelecode":tostationtelecode,"leftTicket":leftTicket,"purpose_codes":purpose_codes,"REPEAT_SUBMIT_TOKEN":token,"_json_att":""}
+        postdata=json.dumps(data)
+        print "This  is CheckQueueCountInfo postdata",postdata
+        return postdata
+
+
+    def GetconfirmSingleinfo(self,CheckOrderINfo,checkresult,token):
+        InfoForPassenger= re.search(r'var ticketInfoForPassengerForm\=(.*?)\;',checkresult,re.DOTALL)
+        InfoForPassengerstr=InfoForPassenger.group(1)
+        InfoForPassengerstr = InfoForPassengerstr.replace("'","\"")
+        InfoForPassengerjson=InfoForPassengerstr.replace("null","\"null\"")
+        InfoForPassengerdict=json.loads(InfoForPassengerjson)
+        leftTicketstr=InfoForPassengerdict['leftTicketStr']
+        key_check_isChange=InfoForPassengerdict['key_check_isChange']
+        train_location=InfoForPassengerdict['train_location']
+        purpose_codes=InfoForPassengerdict['purpose_codes']
+
+        CheckOrderINfodict=json.loads(CheckOrderINfo)
+        passengerTicketStr=CheckOrderINfodict['passengerTicketStr']
+        oldPassengerStr=CheckOrderINfodict['oldPassengerStr']
+        randCode=CheckOrderINfodict['randCode']
+        roomType='00'
+        dwAll='N'
+
+        data={"passengerTicketStr":passengerTicketStr,"oldPassengerStr":oldPassengerStr,"randCode":randCode,"key_check_isChange":key_check_isChange,"leftTicketStr":leftTicketstr,"train_location":train_location,"roomType":roomType,"purpose_codes":purpose_codes,"REPEAT_SUBMIT_TOKEN":token,"dwAll":dwAll,"_json_att":""}
+        postdata=json.dumps(data)
+        print "This  is GetconfirmSingleinfo postdata",postdata
+        return postdata
+
+
+
+
+
+
 
 
 
@@ -359,7 +422,10 @@ class ShopTicket:
                 print "1.车票预订  2.车次查询   3.余票查询  4.退票  5.改签  6.东莞直通车"
                 service=raw_input('请输入服务数字:')
                 if service=='1':
-                    queryinfo=self.Query()
+                    FromST=raw_input('请输入您的出发站:')
+                    ToST=raw_input('请输入您的到达站:')
+                    Startdate=raw_input('请输入您的出发日期（8位数字）:')
+                    queryinfo=self.Query(FromST,ToST,Startdate)
                     bookingdata=self.PrintNumInfo(queryinfo)
                     bookingnum=int(raw_input('请选择您要预订的车次:'))
                     checkdata=bookingdata[bookingnum]
@@ -391,7 +457,9 @@ class ShopTicket:
                     SeatTypeStr=self.FullSeatTypeDict[str(SeatType)] #座位编码
                     bookincodestr=self.BookingCheckCode(token) #扣位验证码字符
                     CheckOrderINfo=self.GetCheckOrderINfo(PassengerData,bookincodestr,SeatTypeStr,token)
-
+                    getQueueCountInfo=self.GetCheckQueueCountInfo(Startdate,checkresult,token,SeatTypeStr)
+                    CheckQueueCountInfo=self.GetconfirmSingleinfo(CheckOrderINfo,checkresult,token)
+                    
 
                     self.LoginOut()
 

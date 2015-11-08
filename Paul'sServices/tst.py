@@ -2,6 +2,7 @@
 #_*_coding:utf-8_*_
 #作者:Paul哥
 import urllib2,pickle,json,re,sys
+import datetime
 
 from PIL import ImageFont
 from PIL import Image
@@ -35,9 +36,52 @@ html1=html.read()
 html.close()
 
 SeatType = re.search(r'var init_seatTypes\=\[\{(.*?)\}\]\;',html1,re.DOTALL)
-b = re.search(r'var ticketInfoForPassengerForm\=(.*?)\;',html1,re.DOTALL)
-c = re.search(r'var orderRequestDTO\=(.*?)\;',html1,re.DOTALL)
 token= re.search(r'var globalRepeatSubmitToken = \'(.*?)\'\;',html1,re.DOTALL)
+InfoForPassenger= re.search(r'var ticketInfoForPassengerForm\=(.*?)\;',html1,re.DOTALL)
+InfoForPassengerstr=InfoForPassenger.group(1)
+InfoForPassengerstr = InfoForPassengerstr.replace("'","\"")
+InfoForPassengerjson=InfoForPassengerstr.replace("null","\"null\"")
+InfoForPassengerdict=json.loads(InfoForPassengerjson)
+leftTicket=InfoForPassengerdict['train_location']
+purpose_codes=InfoForPassengerdict['key_check_isChange']
+
+print leftTicket
+print purpose_codes
+
+
+# orderRequestDTO = re.search(r'var orderRequestDTO\=(.*?)\;',html1,re.DOTALL)
+# InfoForPassengerstr=orderRequestDTO.group(1)
+# InfoForPassengerstr = InfoForPassengerstr.replace("'","\"")
+# InfoForPassengerjson=InfoForPassengerstr.replace("null","\"null\"")
+# orderRequestDTOdict=json.loads(InfoForPassengerjson)
+# train_num=orderRequestDTOdict['train_no']
+# stationTrainCode=orderRequestDTOdict['station_train_code']
+# fromStationTelecode=orderRequestDTOdict['from_station_telecode']
+# tostationtelecode=orderRequestDTOdict['to_station_telecode']
+# print train_num
+# print stationTrainCode
+# print fromStationTelecode
+# print tostationtelecode
+
+
+
+
+
+# Weekdict={'1':"Mon",'2':"Tue","3":"Wed","4":"Thu","5":"Fri","6":"Sat","7":"Sun"}
+# Monthdict={"01":"Jan","02":"Feb","03":"Mar","04":"Apr","05":"May","06":"Jun","07":"Jul","08":"Aug","09":"Sep","10":"Oct","11":"Nov","12":"Dec"}
+# startdate='20140612'
+#
+# year=startdate[0:4]
+# month=startdate[4:6]
+# day=startdate[6:8]
+# anyday=datetime.datetime(int(year),int(month),int(day)).strftime("%w")
+# weekday=Weekdict[str(anyday)]
+# monthstr=Monthdict[month]
+# train_date=weekday+" "+monthstr+" "+day+" "+year+" "+"00:00:00 GMT+0800 (中国标准时间)"
+# print train_date
+
+
+
 # print token.group(1)
 #
 # SeatTypeStr=SeatType.group(1)
