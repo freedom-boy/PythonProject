@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #_*_coding:utf-8_*_
 #作者:Paul哥
-import urllib2,pickle,json,re,sys
+import urllib2,pickle,json,re,sys,random
 import datetime
 
 from PIL import ImageFont
@@ -31,22 +31,41 @@ FullSeatTypeDict={'商务座':'9','二等座':'O','一等座':'M','特等座':'P
 # findall=resp.decode('utf8')
 # soup = BeautifulSoup(open('bookingrequest.html'),'lxml')
 # print soup.prettify()
-html=open('booking.html','rb')
+html=open('bookingrequest.html','rb')
 html1=html.read()
 html.close()
 
-SeatType = re.search(r'var init_seatTypes\=\[\{(.*?)\}\]\;',html1,re.DOTALL)
-token= re.search(r'var globalRepeatSubmitToken = \'(.*?)\'\;',html1,re.DOTALL)
-InfoForPassenger= re.search(r'var ticketInfoForPassengerForm\=(.*?)\;',html1,re.DOTALL)
-InfoForPassengerstr=InfoForPassenger.group(1)
-InfoForPassengerstr = InfoForPassengerstr.replace("'","\"")
-InfoForPassengerjson=InfoForPassengerstr.replace("null","\"null\"")
-InfoForPassengerdict=json.loads(InfoForPassengerjson)
-leftTicket=InfoForPassengerdict['train_location']
-purpose_codes=InfoForPassengerdict['key_check_isChange']
+# SeatType = re.search(r'var init_seatTypes\=\[\{(.*?)\}\]\;',html1,re.DOTALL)
+# token= re.search(r'var globalRepeatSubmitToken = \'(.*?)\'\;',html1,re.DOTALL)
 
-print leftTicket
-print purpose_codes
+PayOrderInfostr= re.search(r'var parOrderDTOJson \= (.*?)\}\'\;',html1,re.DOTALL)
+PayOrderstr=PayOrderInfostr.group(1)
+PayOrderstr=PayOrderstr+"}'"
+PayOrderstr = PayOrderstr.replace("'","\"")
+PayOrderjson=str(PayOrderstr.replace("null","\"null\""))
+infojson=json.loads(PayOrderjson)
+PayOrderInfo=json.loads(infojson)
+Payorderlist=PayOrderInfo['orders'][0]
+getticketnum=Payorderlist['sequence_no'] #取票号
+totalprice=Payorderlist['ticket_total_price_page'] #票价
+fromstation=(Payorderlist['tickets'][0])['stationTrainDTO']['from_station_name'] #出发站
+tostation=(Payorderlist['tickets'][0])['stationTrainDTO']['to_station_name'] #到达站
+trainnum=(Payorderlist['tickets'][0])['stationTrainDTO']['station_train_code'] #车次号
+passengername=(Payorderlist['tickets'][0])['passengerDTO']['passenger_name'] #乘客姓名
+traincoachnum=(Payorderlist['tickets'][0])['coach_name'] #车厢号
+seatnum=(Payorderlist['tickets'][0])['seat_name'] #座位号
+Seattype=(Payorderlist['tickets'][0])['seat_type_name'] #席别类型
+lostpaytime=(Payorderlist['tickets'][0])['lose_time'] #支付截止时间
+
+print '您好，恭喜您已成功为%s预订%s至%s的%s次列车，您的坐席为%s，坐席未知在%s号车厢%s座位，票价为%s元' % (passengername,fromstation,tostation,trainnum,Seattype,traincoachnum,seatnum,totalprice)
+print '请您在%s之前完成支付，过期作废，完成支付后您的取票号为%s，请牢记！' % (lostpaytime,getticketnum)
+
+
+#leftTicket=InfoForPassengerdict['']
+# purpose_codes=InfoForPassengerdict['key_check_isChange']
+# #
+#print leftTicket
+# print purpose_codes
 
 
 # orderRequestDTO = re.search(r'var orderRequestDTO\=(.*?)\;',html1,re.DOTALL)
@@ -139,5 +158,11 @@ print purpose_codes
 #
 # #draw = ImageDraw.Draw(img)
 # img.show()
-# img.close()
+# # img.close()
+jsonstr='{"validateMessagesShowId":"_validatorMessage","status":true,"httpstatus":200,"data":{"submitStatus":true},"messages":[],"validateMessages":{}}'
+testdict=json.loads(jsonstr)
+
+if testdict['data']['submitStatus']==True:
+    print 'OrderRusultOK'
+
 

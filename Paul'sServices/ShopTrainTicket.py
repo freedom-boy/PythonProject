@@ -398,17 +398,28 @@ class ShopTicket:
         return postdata
 
 
+    def PrintOrderResult(self,resp):
+        PayOrderInfostr= re.search(r'var parOrderDTOJson \= (.*?)\}\'\;',resp,re.DOTALL)
+        PayOrderstr=PayOrderInfostr.group(1)
+        PayOrderstr=PayOrderstr+"}'"
+        PayOrderstr = PayOrderstr.replace("'","\"")
+        PayOrderjson=str(PayOrderstr.replace("null","\"null\""))
+        infojson=json.loads(PayOrderjson)
+        PayOrderInfo=json.loads(infojson)
+        Payorderlist=PayOrderInfo['orders'][0]
+        getticketnum=Payorderlist['sequence_no'] #取票号
+        totalprice=Payorderlist['ticket_total_price_page'] #票价
+        fromstation=(Payorderlist['tickets'][0])['stationTrainDTO']['from_station_name'] #出发站
+        tostation=(Payorderlist['tickets'][0])['stationTrainDTO']['to_station_name'] #到达站
+        trainnum=(Payorderlist['tickets'][0])['stationTrainDTO']['station_train_code'] #车次号
+        passengername=(Payorderlist['tickets'][0])['passengerDTO']['passenger_name'] #乘客姓名
+        traincoachnum=(Payorderlist['tickets'][0])['coach_name'] #车厢号
+        seatnum=(Payorderlist['tickets'][0])['seat_name'] #座位号
+        Seattype=(Payorderlist['tickets'][0])['seat_type_name'] #席别类型
+        lostpaytime=(Payorderlist['tickets'][0])['lose_time'] #支付截止时间
 
-
-
-
-
-
-
-
-
-
-
+        print '您好，恭喜您已成功为%s预订%s至%s的%s次列车，您的坐席为%s，坐席未知在%s号车厢%s座位，票价为%s元' % (passengername,fromstation,tostation,trainnum,Seattype,traincoachnum,seatnum,totalprice)
+        print '请您在%s之前完成支付，过期作废，完成支付后您的取票号为%s，请牢记！' % (lostpaytime,getticketnum)
 
 
     def ShopRun(self):
@@ -458,13 +469,33 @@ class ShopTicket:
                     bookincodestr=self.BookingCheckCode(token) #扣位验证码字符
                     CheckOrderINfo=self.GetCheckOrderINfo(PassengerData,bookincodestr,SeatTypeStr,token)
                     getQueueCountInfo=self.GetCheckQueueCountInfo(Startdate,checkresult,token,SeatTypeStr)
-                    CheckQueueCountInfo=self.GetconfirmSingleinfo(CheckOrderINfo,checkresult,token)
-                    
+                    confirmSingleInfo=self.GetconfirmSingleinfo(CheckOrderINfo,checkresult,token)
+                    checkorderresult=SeatBooking.CheckOrderInfo(CheckOrderINfo)
+                    print checkorderresult
+                    getQueueCountresult=SeatBooking.GetQueueCount(getQueueCountInfo)
+                    print getQueueCountresult
+                    confirmSingleresult=SeatBooking.confirmSingleForQueue(confirmSingleInfo)
+                    print confirmSingleresult
+                    for i in range(3):
+                        queryorderid=SeatBooking.GetqueryOrderWaitTime(token)
+                        if queryorderid==None or queryorderid=='orderIdnull' or queryorderid=='GetOrderIdError':
+                            continue
+                        else:
+                            break
+                    else:
+                        print '三次都没获取到orderid，我也没办法了，下次吧，拜拜！'
+                        self.LoginOut()
+
+                    resultdata={"orderSequence_no":queryorderid,"REPEAT_SUBMIT_TOKEN":token,"_json_att":""}
+                    resultorderdata=json.dumps(resultdata)
+                    GetResultOrderStatus=SeatBooking.ResultOrder(resultorderdata)
+                    Payorderdata={"REPEAT_SUBMIT_TOKEN":token,"_json_att":""}
+                    if GetResultOrderStatus=='OrderRusultOK':
+                        PayOrderInfo=SeatBooking.PayOrder(Payorderdata)
+                        if PayOrderInfo!='GetPayOrderFailure':
+                            self.PrintOrderResult(PayOrderInfo)
 
                     self.LoginOut()
-
-
-
 
 
 if __name__=="__main__":

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #_*_coding:utf-8_*_
 #作者:Paul哥
-import urllib2,pickle,json
+import urllib2,random,json
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -12,6 +12,10 @@ class Booking:
         self.checkbookingurl='https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest'#扣位验证链接
         self.bookingurl='https://kyfw.12306.cn/otn/confirmPassenger/initDc'
         self.getPassengerurl='https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs'
+        self.checkOrderInfourl='https://kyfw.12306.cn/otn/confirmPassenger/checkOrderInfo'
+        self.getQueueCounturl='https://kyfw.12306.cn/otn/confirmPassenger/getQueueCount'
+        self.confirmSingleForQueueurl='https://kyfw.12306.cn/otn/confirmPassenger/confirmSingleForQueue'
+        self.resultOrderurl='https://kyfw.12306.cn/otn/confirmPassenger/resultOrderForDcQueue'
         self.defaultdata=json.dumps({"_json_att=":""})
         self.accessHeaders={
             'Host': 'kyfw.12306.cn',
@@ -88,6 +92,82 @@ class Booking:
             print count,'--',passcenger['passenger_name'],'  ',passcenger['sex_name'],'  ',passcenger['passenger_id_type_name'],' ',passcenger['passenger_id_no'],'  ',passcenger['passenger_type_name']
 
         return PassengerInfodict
+
+    def CheckOrderInfo(self,postdata):
+        request=urllib2.Request(self.checkOrderInfourl,headers=self.getpassengerHeaders,data=postdata)
+        try:
+            response=urllib2.urlopen(request,timeout=2)
+            return response.read()
+        except:
+
+            return 'CheckOrderInfo Error'
+
+    def GetQueueCount(self,postdata):
+        request=urllib2.Request(self.getQueueCounturl,headers=self.getpassengerHeaders,data=postdata)
+        try:
+            response=urllib2.urlopen(request,timeout=2)
+            return response.read()
+        except:
+
+            return 'getQueueCount Error'
+
+    def confirmSingleForQueue(self,postdata):
+        request=urllib2.Request(self.confirmSingleForQueueurl,headers=self.getpassengerHeaders,data=postdata)
+        try:
+            response=urllib2.urlopen(request,timeout=2)
+            return response.read()
+        except:
+
+            return 'confirmSingleForQueue Error'
+
+
+    def GetqueryOrderWaitTime(self,token):
+        randomnum=random.randrange(1000000000000,2000000000000, 13)
+        mainurl='https://kyfw.12306.cn/otn/confirmPassenger/queryOrderWaitTime?random='+str(randomnum)+'&tourFlag=dc&_json_att=&REPEAT_SUBMIT_TOKEN='+token
+
+        request=urllib2.Request(mainurl,headers=self.getpassengerHeaders)
+        try:
+            response=urllib2.urlopen(request)
+            respdict=json.loads(response.read())
+            if respdict.has_key('data')==True:
+                respdata=respdict['data']
+                if respdata.has_key('orderId'):
+                    return respdata['orderId']
+                else:
+                    print 'orderidunll'
+                    return 'orderIdnull'
+        except:
+            print 'GetOrderIdError'
+            return 'GetOrderIdError'
+
+
+    def ResultOrder(self,postdata):
+        request=urllib2.Request(self.resultOrderurl,headers=self.getpassengerHeaders,data=postdata)
+        try:
+            response=urllib2.urlopen(request,timeout=2)
+            resp=json.loads(response.read())
+            if resp['data']['submitStatus']==True:
+                return 'OrderRusultOK'
+            else:
+                print 'OrderRusultFailure',resp
+                return resp
+        except:
+            return 'OrderRusultFailure'
+
+    def PayOrder(self,postdata):
+        randomnum=random.randrange(1000000000000,2000000000000, 13)
+        payorderurl='https://kyfw.12306.cn/otn//payOrder/init?random='+str(randomnum)
+        request=urllib2.Request(payorderurl,headers=self.getpassengerHeaders,data=postdata)
+        try:
+            response=urllib2.urlopen(request,timeout=2)
+            resp=json.loads(response.read())
+            return resp
+        except:
+            return 'GetPayOrderFailure'
+
+
+
+
 
 
 
