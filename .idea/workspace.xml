@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33402eb7-b243-4cb0-9ddb-b25e418b4110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paul'sServices/code.jpg" afterPath="$PROJECT_DIR$/Paul'sServices/code.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paul'sServices/LoginAccount.py" afterPath="$PROJECT_DIR$/Paul'sServices/LoginAccount.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paul'sServices/BookingSeat.py" afterPath="$PROJECT_DIR$/Paul'sServices/BookingSeat.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py" afterPath="$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paul'sServices/TrainNumQuery.py" afterPath="$PROJECT_DIR$/Paul'sServices/TrainNumQuery.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PythonProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +23,7 @@
     <SUITE FILE_PATH="coverage/PythonProject$test.coverage" NAME="test Coverage Results" MODIFIED="1446797789237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office" />
     <SUITE FILE_PATH="coverage/PythonProject$Login.coverage" NAME="Login Coverage Results" MODIFIED="1446621052991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
     <SUITE FILE_PATH="coverage/PythonProject$LoginAccount.coverage" NAME="LoginAccount Coverage Results" MODIFIED="1446786450773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
-    <SUITE FILE_PATH="coverage/PythonProject$ShopTrainTicket.coverage" NAME="ShopTrainTicket Coverage Results" MODIFIED="1446798598014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
+    <SUITE FILE_PATH="coverage/PythonProject$ShopTrainTicket.coverage" NAME="ShopTrainTicket Coverage Results" MODIFIED="1447051937569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
     <SUITE FILE_PATH="coverage/PythonProject$CheckIpStatus.coverage" NAME="CheckIpStatus Coverage Results" MODIFIED="1446199314344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/AdslGetdata" />
     <SUITE FILE_PATH="coverage/PythonProject$TrainNumQuery.coverage" NAME="TrainNumQuery Coverage Results" MODIFIED="1446805751965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
     <SUITE FILE_PATH="coverage/PythonProject$ExecuteBackup.coverage" NAME="ExecuteBackup Coverage Results" MODIFIED="1446174257753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/AdslGetdata" />
@@ -44,21 +43,31 @@
       <file leaf-file-name="LoginAccount.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Paul'sServices/LoginAccount.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2691">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2599">
               <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShopTrainTicket.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShopTrainTicket.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2944">
-              <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+            <state vertical-scroll-proportion="1.6347151" vertical-offset="4222" max-vertical-offset="11891">
+              <caret line="211" column="34" selection-start-line="211" selection-start-column="34" selection-end-line="211" selection-end-column="34" />
               <folding>
-                <element signature="e#52#90#0" expanded="true" />
+                <element signature="e#52#112#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookingSeat.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Paul'sServices/BookingSeat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="4278">
+              <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,13 +84,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrainNumQuery.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TrainNumQuery.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Paul'sServices/TrainNumQuery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21232876" vertical-offset="1218" max-vertical-offset="2438">
-              <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="827" max-vertical-offset="2737">
+              <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
               <folding>
-                <element signature="e#52#78#0" expanded="true" />
+                <element signature="e#52#85#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,7 +114,6 @@
         <option value="D:/Python/Office/AdslGetdata/test.py" />
         <option value="D:/Python/Office/AdslGetdata/MonitorInfo.py" />
         <option value="D:/Python/Office/AdslGetdata/CheckIpStatus.py" />
-        <option value="D:/Python/Office/AdslGetdata/Reboot.py" />
         <option value="D:/Python/Office/AdslGetdata/VioGet.py" />
         <option value="D:/Python/Office/AdslGetdata/CheckRunCode.py" />
         <option value="$USER_HOME$/Desktop/linshi/adslgetdata/GetTrainData.py" />
@@ -121,9 +129,11 @@
         <option value="D:/Python/Office/AdslGetdata/RunningProgram.py" />
         <option value="$USER_HOME$/Desktop/linshi/adslgetdata/config.ini" />
         <option value="$PROJECT_DIR$/Paul'sServices/LoginAccount.py" />
-        <option value="$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py" />
         <option value="D:/Python/Office/test.py" />
         <option value="$PROJECT_DIR$/Paul'sServices/TrainNumQuery.py" />
+        <option value="$PROJECT_DIR$/Paul'sServices/BookingSeat.py" />
+        <option value="$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py" />
+        <option value="D:/Python/Office/AdslGetdata/Reboot.py" />
       </list>
     </option>
   </component>
@@ -183,7 +193,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="adslgetdata" />
+              <option name="myItemId" value="Office" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PythonProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Office" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdslGetdata" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -229,7 +253,7 @@
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.TrainNumQuery">
+  <component name="RunManager" selected="Python.ShopTrainTicket">
     <configuration default="false" name="RunningProgram" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -540,8 +564,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.TrainNumQuery" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ShopTrainTicket" />
+        <item index="0" class="java.lang.String" itemvalue="Python.ShopTrainTicket" />
+        <item index="1" class="java.lang.String" itemvalue="Python.TrainNumQuery" />
         <item index="2" class="java.lang.String" itemvalue="Python.test" />
         <item index="3" class="java.lang.String" itemvalue="Python.LoginAccount" />
         <item index="4" class="java.lang.String" itemvalue="Python.RunningProgram" />
@@ -566,18 +590,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1672" y="-8" width="1696" height="1066" extended-state="6" />
+    <frame x="1672" y="-8" width="1696" height="1066" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294621" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39144385" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22887701" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6094132" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.486631" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.542246" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15709047" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15709047" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -643,16 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python/Office/AdslGetdata/Reboot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="1610">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-          <folding>
-            <element signature="e#118#127#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Office/AdslGetdata/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="621" max-vertical-offset="4117">
@@ -712,16 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="1633">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Office/AdslGetdata/Reboot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="1610">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-          <folding>
-            <element signature="e#118#127#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,16 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python/Office/AdslGetdata/Reboot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1252174" vertical-offset="457" max-vertical-offset="1541">
-          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
-          <folding>
-            <element signature="e#118#127#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Office/AdslGetdata/CheckIpStatus.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="621" max-vertical-offset="1794">
@@ -896,16 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/linshi/adslgetdata/Reboot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.9335444" vertical-offset="308" max-vertical-offset="3335">
-          <caret line="94" column="60" selection-start-line="94" selection-start-column="60" selection-end-line="94" selection-end-column="60" />
-          <folding>
-            <element signature="e#118#127#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/linshi/adslgetdata/rsync.secrets">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
@@ -950,16 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/linshi/adslgetdata/RunningProgram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15257049" vertical-offset="0" max-vertical-offset="2668">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#67#86#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/PIL/Image.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.4155843" vertical-offset="51228" max-vertical-offset="58351">
@@ -976,11 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Paul'sServices/code.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Office/ccbcode/CreateCodeLibrary.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.4396423" vertical-offset="318" max-vertical-offset="989">
@@ -995,14 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36580518" vertical-offset="0" max-vertical-offset="4370">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/linshi/adslgetdata/GetTrainData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6571429" vertical-offset="1104" max-vertical-offset="2599">
-          <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1025,22 +986,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py">
+    <entry file="file://$PROJECT_DIR$/Paul'sServices/TrainNumQuery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2944">
-          <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="827" max-vertical-offset="2737">
+          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
           <folding>
-            <element signature="e#52#90#0" expanded="true" />
+            <element signature="e#52#85#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Paul'sServices/TrainNumQuery.py">
+    <entry file="file://$PROJECT_DIR$/Paul'sServices/BookingSeat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21232876" vertical-offset="1218" max-vertical-offset="2438">
-          <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="4278">
+          <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/linshi/adslgetdata/Reboot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5233161" vertical-offset="1270" max-vertical-offset="3243">
+          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/linshi/adslgetdata/RunningProgram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.064767" vertical-offset="1275" max-vertical-offset="2576">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/linshi/adslgetdata/GetTrainData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0854921" vertical-offset="621" max-vertical-offset="2599">
+          <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6347151" vertical-offset="4222" max-vertical-offset="11891">
+          <caret line="211" column="34" selection-start-line="211" selection-start-column="34" selection-end-line="211" selection-end-column="34" />
           <folding>
-            <element signature="e#52#78#0" expanded="true" />
+            <element signature="e#52#112#0" expanded="true" />
           </folding>
         </state>
       </provider>

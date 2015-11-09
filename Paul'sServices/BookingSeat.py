@@ -41,16 +41,18 @@ class Booking:
         }
 
     def BookingCheck(self,postdata):
-        # checkuserrequest=urllib2.Request(self.checkuserurl,headers=self.accessHeaders,data=self.defaultdata)
-        # try:
-        #     response=urllib2.urlopen(checkuserrequest,timeout=2)
-        #     print response.read()
-        # except:
-        #     print '车次预订第一次验证失败'
+        checkuserrequest=urllib2.Request(self.checkuserurl,headers=self.accessHeaders,data=self.defaultdata)
+        try:
+            response=urllib2.urlopen(checkuserrequest,timeout=2)
+            print response.read()
+        except:
+            print '车次预订第一次验证失败'
 
         request=urllib2.Request(self.checkbookingurl,headers=self.accessHeaders,data=postdata)
+        print postdata
         try:
             response=urllib2.urlopen(request,timeout=2)
+            print response.read()
         except:
             print '车次预订第二次验证失败'
             return 'BookingCheckError'
