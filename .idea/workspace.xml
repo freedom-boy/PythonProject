@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33402eb7-b243-4cb0-9ddb-b25e418b4110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paul'sServices/BookingSeat.py" afterPath="$PROJECT_DIR$/Paul'sServices/BookingSeat.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paul'sServices/code.jpg" afterPath="$PROJECT_DIR$/Paul'sServices/code.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py" afterPath="$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PythonProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,10 +19,10 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/PythonProject$RunningProgram.coverage" NAME="RunningProgram Coverage Results" MODIFIED="1446633064444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/AdslGetdata" />
     <SUITE FILE_PATH="coverage/PythonProject$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1446198098641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/AdslGetdata" />
-    <SUITE FILE_PATH="coverage/PythonProject$test.coverage" NAME="test Coverage Results" MODIFIED="1446797789237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office" />
+    <SUITE FILE_PATH="coverage/PythonProject$test.coverage" NAME="test Coverage Results" MODIFIED="1447066551398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office" />
     <SUITE FILE_PATH="coverage/PythonProject$Login.coverage" NAME="Login Coverage Results" MODIFIED="1446621052991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
     <SUITE FILE_PATH="coverage/PythonProject$LoginAccount.coverage" NAME="LoginAccount Coverage Results" MODIFIED="1446786450773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
-    <SUITE FILE_PATH="coverage/PythonProject$ShopTrainTicket.coverage" NAME="ShopTrainTicket Coverage Results" MODIFIED="1447051937569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
+    <SUITE FILE_PATH="coverage/PythonProject$ShopTrainTicket.coverage" NAME="ShopTrainTicket Coverage Results" MODIFIED="1447066764351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
     <SUITE FILE_PATH="coverage/PythonProject$CheckIpStatus.coverage" NAME="CheckIpStatus Coverage Results" MODIFIED="1446199314344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/AdslGetdata" />
     <SUITE FILE_PATH="coverage/PythonProject$TrainNumQuery.coverage" NAME="TrainNumQuery Coverage Results" MODIFIED="1446805751965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
     <SUITE FILE_PATH="coverage/PythonProject$ExecuteBackup.coverage" NAME="ExecuteBackup Coverage Results" MODIFIED="1446174257753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/AdslGetdata" />
@@ -43,9 +42,11 @@
       <file leaf-file-name="LoginAccount.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Paul'sServices/LoginAccount.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2599">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="66" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="2599">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              <folding>
+                <element signature="e#52#95#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,8 +54,8 @@
       <file leaf-file-name="ShopTrainTicket.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6347151" vertical-offset="4222" max-vertical-offset="11891">
-              <caret line="211" column="34" selection-start-line="211" selection-start-column="34" selection-end-line="211" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.05882353" vertical-offset="4636" max-vertical-offset="11891">
+              <caret line="203" column="34" selection-start-line="203" selection-start-column="34" selection-end-line="203" selection-end-column="34" />
               <folding>
                 <element signature="e#52#112#0" expanded="true" />
               </folding>
@@ -65,7 +66,7 @@
       <file leaf-file-name="BookingSeat.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Paul'sServices/BookingSeat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="4278">
+            <state vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="4278">
               <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
               <folding />
             </state>
@@ -75,10 +76,10 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Python/Office/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="574" max-vertical-offset="1058">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="614" max-vertical-offset="1173">
+              <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
               <folding>
-                <element signature="e#52#93#0" expanded="true" />
+                <element signature="e#52#105#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,11 +130,11 @@
         <option value="D:/Python/Office/AdslGetdata/RunningProgram.py" />
         <option value="$USER_HOME$/Desktop/linshi/adslgetdata/config.ini" />
         <option value="$PROJECT_DIR$/Paul'sServices/LoginAccount.py" />
-        <option value="D:/Python/Office/test.py" />
         <option value="$PROJECT_DIR$/Paul'sServices/TrainNumQuery.py" />
         <option value="$PROJECT_DIR$/Paul'sServices/BookingSeat.py" />
-        <option value="$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py" />
         <option value="D:/Python/Office/AdslGetdata/Reboot.py" />
+        <option value="D:/Python/Office/test.py" />
+        <option value="$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py" />
       </list>
     </option>
   </component>
@@ -565,8 +566,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.ShopTrainTicket" />
-        <item index="1" class="java.lang.String" itemvalue="Python.TrainNumQuery" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.TrainNumQuery" />
         <item index="3" class="java.lang.String" itemvalue="Python.LoginAccount" />
         <item index="4" class="java.lang.String" itemvalue="Python.RunningProgram" />
       </list>
@@ -590,8 +591,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1672" y="-8" width="1696" height="1066" extended-state="7" />
-    <editor active="false" />
+    <frame x="1672" y="-8" width="1696" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294621" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -599,9 +600,9 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22887701" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6094132" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.542246" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35508022" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15709047" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15709047" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -968,24 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Paul'sServices/LoginAccount.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2691">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Office/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="574" max-vertical-offset="1058">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="e#52#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Paul'sServices/TrainNumQuery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="827" max-vertical-offset="2737">
@@ -993,14 +976,6 @@
           <folding>
             <element signature="e#52#85#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Paul'sServices/BookingSeat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="4278">
-          <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,10 +1003,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Python/Office/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="614" max-vertical-offset="1173">
+          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+          <folding>
+            <element signature="e#52#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Paul'sServices/LoginAccount.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="2599">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="e#52#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Paul'sServices/BookingSeat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="4278">
+          <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6347151" vertical-offset="4222" max-vertical-offset="11891">
-          <caret line="211" column="34" selection-start-line="211" selection-start-column="34" selection-end-line="211" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.05882353" vertical-offset="4636" max-vertical-offset="11891">
+          <caret line="203" column="34" selection-start-line="203" selection-start-column="34" selection-end-line="203" selection-end-column="34" />
           <folding>
             <element signature="e#52#112#0" expanded="true" />
           </folding>

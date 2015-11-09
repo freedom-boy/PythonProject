@@ -215,8 +215,8 @@ class ShopTicket:
 			dateformat='%Y-%m-%d'
 			backdate=time.strftime(dateformat, time.localtime())
 
-			postdict={"secretStr":str(Num["secretStr"]),"train_date":str(traindate),"back_train_date":str(backdate),"tour_flag":"dc","purpose_codes":"ADULT","query_from_station_name":From,"query_to_station_name":To,"undefined":''}
-			postdata=json.dumps(postdict)
+			postdict={"secretStr":str(Num["secretStr"]),"train_date":str(traindate),"back_train_date":str(backdate),"tour_flag":"dc","purpose_codes":"ADULT","query_from_station_name":From,"query_to_station_name":To}
+			postdata=urllib.urlencode(postdict)+"&undefined"
 			TrainInfodict[count]=postdata
 			#print (str(count)).ljust(5),'|',TraNum.ljust(6),'|',From.center(6),'|',To.center(6),'|',starttime.center(6),'|',arrivetime.center(6),'|',swz.center(4),'|',tz.center(4),'|',zy.center(4),'|',ze.center(4),'|',gr.center(6),'|',rw.center(2)
 			print '-------------------------------------------------------------------------------------------'
