@@ -2,7 +2,7 @@
 #_*_coding:utf-8_*_
 #作者:Paul哥
 import urllib2,random,json
-import ssl
+import ssl,urllib
 ssl._create_default_https_context = ssl._create_unverified_context
 
 class Booking:
@@ -40,16 +40,69 @@ class Booking:
 
         }
 
-    def BookingCheck(self,postdata):
-        checkuserrequest=urllib2.Request(self.checkuserurl,headers=self.accessHeaders,data=self.defaultdata)
-        try:
-            response=urllib2.urlopen(checkuserrequest,timeout=2)
-            print response.read()
-        except:
-            print '车次预订第一次验证失败'
+        self.submitorderrequestheaders={
+            'Host': 'kyfw.12306.cn',
+            'Connection': 'keep-alive',
+            #'Content-Length': '446',
+            'Accept':'*/*',
+            'Origin': 'https://kyfw.12306.cn',
+            'X-Requested-With': 'XMLHttpRequest',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36',
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            'Referer': 'https://kyfw.12306.cn/otn/leftTicket/init',
+            #'Accept-Encoding': 'gzip, deflate',
+            'Accept-Language': 'zh-CN,zh;q=0.8'
+        }
+        self.comfirmpassengerinitdcheaders={
+            'Host': 'kyfw.12306.cn',
+            'Connection': 'keep-alive',
+            #'Content-Length': '10',
+            'Cache-Control': 'max-age=0',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Origin': 'https://kyfw.12306.cn',
+            'Upgrade-Insecure-Requests': '1',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36',
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Referer': 'https://kyfw.12306.cn/otn/leftTicket/init',
+            #Accept-Encoding: gzip, deflate
+            'Accept-Language': 'zh-CN,zh;q=0.8'
+        }
 
-        request=urllib2.Request(self.checkbookingurl,headers=self.accessHeaders,data=postdata)
-        print postdata
+        self.checkOrderInfheaders={
+            'Host': 'kyfw.12306.cn',
+            'Connection': 'keep-alive',
+            'Accept': 'application/json, text/javascript, */*; q=0.01',
+            'Origin': 'https://kyfw.12306.cn',
+            'X-Requested-With': 'XMLHttpRequest',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36',
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            'Referer': 'https://kyfw.12306.cn/otn/confirmPassenger/initDc',
+            #Accept-Encoding: gzip, deflate
+            'Accept-Language': 'zh-CN,zh;q=0.8'
+
+        }
+        self.getquerywaittimeeheaders={
+
+            'Host': 'kyfw.12306.cn',
+            'Connection': 'keep-alive',
+            'Accept': 'application/json, text/javascript, */*; q=0.01',
+            'X-Requested-With': 'XMLHttpRequest',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36',
+            'Referer': 'https://kyfw.12306.cn/otn/confirmPassenger/initDc',
+            #Accept-Encoding: gzip, deflate
+            'Accept-Language': 'zh-CN,zh;q=0.8'
+        }
+
+    def BookingCheck(self,postdata):
+        # checkuserrequest=urllib2.Request(self.checkuserurl,headers=self.accessHeaders,data=self.defaultdata)
+        # try:
+        #     response=urllib2.urlopen(checkuserrequest,timeout=2)
+        #     print response.read()
+        # except:
+        #     print '车次预订第一次验证失败'
+
+        request=urllib2.Request(self.checkbookingurl,headers=self.submitorderrequestheaders,data=postdata)
+        #print postdata
         try:
             response=urllib2.urlopen(request,timeout=2)
             print response.read()
@@ -58,7 +111,7 @@ class Booking:
             return 'BookingCheckError'
 
 
-        bookingrequest=urllib2.Request(self.bookingurl,headers=self.accessHeaders,data=self.defaultdata)
+        bookingrequest=urllib2.Request(self.bookingurl,headers=self.comfirmpassengerinitdcheaders,data=self.defaultdata)
         try:
             bookingresponse=urllib2.urlopen(bookingrequest,timeout=2)
             #print bookingresponse.read()
@@ -96,7 +149,7 @@ class Booking:
         return PassengerInfodict
 
     def CheckOrderInfo(self,postdata):
-        request=urllib2.Request(self.checkOrderInfourl,headers=self.getpassengerHeaders,data=postdata)
+        request=urllib2.Request(self.checkOrderInfourl,headers=self.checkOrderInfheaders,data=postdata)
         try:
             response=urllib2.urlopen(request,timeout=2)
             return response.read()
@@ -105,7 +158,7 @@ class Booking:
             return 'CheckOrderInfo Error'
 
     def GetQueueCount(self,postdata):
-        request=urllib2.Request(self.getQueueCounturl,headers=self.getpassengerHeaders,data=postdata)
+        request=urllib2.Request(self.getQueueCounturl,headers=self.checkOrderInfheaders,data=postdata)
         try:
             response=urllib2.urlopen(request,timeout=2)
             return response.read()
@@ -114,7 +167,7 @@ class Booking:
             return 'getQueueCount Error'
 
     def confirmSingleForQueue(self,postdata):
-        request=urllib2.Request(self.confirmSingleForQueueurl,headers=self.getpassengerHeaders,data=postdata)
+        request=urllib2.Request(self.confirmSingleForQueueurl,headers=self.checkOrderInfheaders,data=postdata)
         try:
             response=urllib2.urlopen(request,timeout=2)
             return response.read()
@@ -127,7 +180,7 @@ class Booking:
         randomnum=random.randrange(1000000000000,2000000000000, 13)
         mainurl='https://kyfw.12306.cn/otn/confirmPassenger/queryOrderWaitTime?random='+str(randomnum)+'&tourFlag=dc&_json_att=&REPEAT_SUBMIT_TOKEN='+token
 
-        request=urllib2.Request(mainurl,headers=self.getpassengerHeaders)
+        request=urllib2.Request(mainurl,headers=self.getquerywaittimeeheaders)
         try:
             response=urllib2.urlopen(request)
             respdict=json.loads(response.read())
@@ -144,7 +197,7 @@ class Booking:
 
 
     def ResultOrder(self,postdata):
-        request=urllib2.Request(self.resultOrderurl,headers=self.getpassengerHeaders,data=postdata)
+        request=urllib2.Request(self.resultOrderurl,headers=self.checkOrderInfheaders,data=postdata)
         try:
             response=urllib2.urlopen(request,timeout=2)
             resp=json.loads(response.read())
@@ -156,10 +209,11 @@ class Booking:
         except:
             return 'OrderRusultFailure'
 
-    def PayOrder(self,postdata):
+    def PayOrder(self,data):
+        postdata=urllib.urlencode(data)
         randomnum=random.randrange(1000000000000,2000000000000, 13)
         payorderurl='https://kyfw.12306.cn/otn//payOrder/init?random='+str(randomnum)
-        request=urllib2.Request(payorderurl,headers=self.getpassengerHeaders,data=postdata)
+        request=urllib2.Request(payorderurl,headers=self.comfirmpassengerinitdcheaders,data=postdata)
         try:
             response=urllib2.urlopen(request,timeout=2)
             resp=json.loads(response.read())

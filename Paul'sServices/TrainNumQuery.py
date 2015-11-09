@@ -44,6 +44,18 @@ class QueryTrain:
         #print GetQueryUrl
         return GetQueryUrl
 
+    def CreatecheckqueryUrl(self,fromstation,tostation,querydate): #创建查车次url
+        FromCode=self.Satation[fromstation]
+        ToCode=self.Satation[tostation]
+        Querydate=querydate[0:4]+'-'+querydate[4:6]+'-'+querydate[6:8]
+        Dateurl=self.mainurl+'leftTicket/log?leftTicketDTO.train_date=%s' % Querydate
+        Fromurl='leftTicketDTO.from_station=%s' % FromCode
+        Tourl='leftTicketDTO.to_station=%s' % ToCode
+        Tailurl='purpose_codes=ADULT'
+        checkqueryUrl=Dateurl+'&'+Fromurl+'&'+Tourl+'&'+Tailurl
+        #print GetQueryUrl
+        return checkqueryUrl
+
     def GetTrainNumDate(self,queryurl): #返回整个车次信息json
         request=urllib2.Request(queryurl,headers=self.accessHeaders)
         try:
