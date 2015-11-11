@@ -354,6 +354,7 @@ class ShopTicket:
             codestrcookies=LoginRun.PostLoginInfo(self.getpassengerHeaders,data)
             if codestrcookies!='checkcodeFalse':
                 print '验证码输入正确'
+                print '接下来为您出票，可能需要一段时间，请稍等。。。。。'
                 return coderesult
             else:
                 print "不好意思，验证码错误，请重试"
@@ -463,7 +464,7 @@ class ShopTicket:
         Seattype=(Payorderlist['tickets'][0])['seat_type_name'] #席别类型
         lostpaytime=(Payorderlist['tickets'][0])['lose_time'] #支付截止时间
 
-        print '您好，恭喜您已成功为%s预订%s至%s的%s次列车，您的坐席为%s，坐席未知在%s号车厢%s座位，票价为%s元' % (passengername,fromstation,tostation,trainnum,Seattype,traincoachnum,seatnum,totalprice)
+        print '您好，恭喜您已成功为%s预订%s至%s的%s次列车，您的坐席为%s，坐席位置在%s号车厢%s座位，票价为%s元' % (passengername,fromstation,tostation,trainnum,Seattype,traincoachnum,seatnum,totalprice)
         print '请您在%s之前完成支付，过期作废，完成支付后您的取票号为%s，请牢记！' % (lostpaytime,getticketnum)
 
 
@@ -517,25 +518,26 @@ class ShopTicket:
                     getQueueCountInfo=self.GetCheckQueueCountInfo(Startdate,checkresult,token,SeatTypeStr)
                     confirmSingleInfo=self.GetconfirmSingleinfo(CheckOrderINfo,checkresult,token)
                     checkorderresult=SeatBooking.CheckOrderInfo(CheckOrderINfo[1])
-                    print checkorderresult
+                    #print checkorderresult
                     getQueueCountresult=SeatBooking.GetQueueCount(getQueueCountInfo)
-                    print getQueueCountresult
+                    #print getQueueCountresult
                     confirmSingleresult=SeatBooking.confirmSingleForQueue(confirmSingleInfo)
-                    print confirmSingleresult
-                    for i in range(3):
+                    #print confirmSingleresult
+                    for i in range(10):
                         queryorderid=SeatBooking.GetqueryOrderWaitTime(token)
                         if queryorderid==None or queryorderid=='orderIdnull' or queryorderid=='GetOrderIdError':
+                            time.sleep(1)
                             continue
                         else:
                             break
                     else:
-                        print '三次都没获取到orderid，我也没办法了，下次吧，拜拜！'
+                        print '十次都没获取到orderid，我也没办法了，下次吧，拜拜！'
                         self.LoginOut()
 
                     resultdata={"orderSequence_no":queryorderid,"REPEAT_SUBMIT_TOKEN":token,"_json_att":""}
                     resultorderdata=urllib.urlencode(resultdata)
                     GetResultOrderStatus=SeatBooking.ResultOrder(resultorderdata)
-                    print GetResultOrderStatus
+                    #print GetResultOrderStatus
                     Payorderdata={"REPEAT_SUBMIT_TOKEN":token,"_json_att":""}
                     if GetResultOrderStatus=='OrderRusultOK':
                         PayOrderInfo=SeatBooking.PayOrder(Payorderdata)

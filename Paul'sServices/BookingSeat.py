@@ -105,7 +105,7 @@ class Booking:
         #print postdata
         try:
             response=urllib2.urlopen(request,timeout=2)
-            print response.read()
+            # response.read()
         except:
             print '车次预订第二次验证失败'
             return 'BookingCheckError'
@@ -216,7 +216,7 @@ class Booking:
         request=urllib2.Request(payorderurl,headers=self.comfirmpassengerinitdcheaders,data=postdata)
         try:
             response=urllib2.urlopen(request,timeout=2)
-            resp=json.loads(response.read())
+            resp=response.read()
             return resp
         except:
             return 'GetPayOrderFailure'
