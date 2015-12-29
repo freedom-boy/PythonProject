@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/Desktop/linshi/ADSL代理机配置数据/.idea/ADSL代理机配置数据.iml" filepath="$USER_HOME$/Desktop/linshi/ADSL代理机配置数据/.idea/ADSL代理机配置数据.iml" />
       <module fileurl="file://D:/Python/Office/.idea/LearningPython.iml" filepath="D:/Python/Office/.idea/LearningPython.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PythonProject.iml" filepath="$PROJECT_DIR$/.idea/PythonProject.iml" />
       <module fileurl="file://$USER_HOME$/Desktop/linshi/adslgetdata/.idea/adslgetdata.iml" filepath="$USER_HOME$/Desktop/linshi/adslgetdata/.idea/adslgetdata.iml" />

@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="LearningPython" />
     <orderEntry type="module" module-name="adslgetdata" />
+    <orderEntry type="module" module-name="ADSL代理机配置数据" />
   </component>
 </module>
