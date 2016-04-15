@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+    window.onload = function() {
+        // csrf token that is automatically added by PEP plugin has to be removed before submitting to PSP.
+        // Alipay page will fail to load if extra param is added to the form
+        var csrfNode = document.getElementsByName("pep_csrf");
+        if (csrfNode) {
+            for (var i = csrfNode.length - 1; i >= 0; i--) {
+                csrfNode[i].parentNode.removeChild(csrfNode[i]);
+            }
+        }
+
+        document.getElementById("paymentform").submit();
+    };
+</script>
+</head>
+<body><input type="hidden" name="pep_csrf" id="pep_csrf" value="ae1a13db9d3470fba9924caf976b10a920c37529fd2f68ec3b5c5e6fd523f1201580dbd4213e0626c6f376f6fddc5a50221887f7554e11fe78bee6a22333c241">
+<form id="paymentform" method="POST" action="https://mapi.alipay.com/gateway.do?_input_charset=utf-8"><input type="hidden" name="pep_csrf" value="ae1a13db9d3470fba9924caf976b10a920c37529fd2f68ec3b5c5e6fd523f1201580dbd4213e0626c6f376f6fddc5a50221887f7554e11fe78bee6a22333c241">
+<input type="hidden" name="subject" value="上海迪士尼度假区产品"><input type="hidden" name="extra_common_param" value="171003"><input type="hidden" name="sign" value="BhU4a3T+o/TOwHbr59hAso1K0tyyrhraBaKgs4Anf+znywRgcM0+OYrbIfA8/aNLIMT92QLuZg+01YGvSracEb8UKGC6Z+iBbQF6CRJaOaFAGklB28uC150tuKWLw3+9H+tKR5tqwP+NV9dhAgKEjyzE4DaMEHl1Ru81/7T5cTU="><input type="hidden" name="it_b_pay" value="29m"><input type="hidden" name="notify_url" value="https://serviceexternal.shanghaidisneyresort.com/global-pool-override-B/payment-middleware-service/transaction/alipay/confirm"><input type="hidden" name="payment_type" value="1"><input type="hidden" name="paymethod" value="directPay"><input type="hidden" name="out_trade_no" value="20160331011500074363"><input type="hidden" name="partner" value="2088121850549630"><input type="hidden" name="service" value="create_direct_pay_by_user"><input type="hidden" name="total_fee" value="1249.00"><input type="hidden" name="return_url" value="https://www.shanghaidisneyresort.com/checkout/confirmation/"><input type="hidden" name="sign_type" value="RSA"><input type="hidden" name="seller_id" value="2088121850549630"></form>
+
+</body>
+</html>

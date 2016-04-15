@@ -1,0 +1,10 @@
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+xunlongferry.weixin.swiftpass.cn	FALSE	/	FALSE		PLAY_SESSION	"06e1d79f8908aae9c4e627858211ea3c2cba9ae8-login_user_id=b42acca788ca386777f18e02e8491995&login_user_type=member"
+xunlongferry.weixin.swiftpass.cn	FALSE	/	FALSE		SESSION	7a0f8e2f44d39947d4a20c8fe1ae46ccf1b2b552
+xunlongferry.weixin.swiftpass.cn	FALSE	/	FALSE		goPrice	%5B%7B%22userType%22%3A%22URT001%22%2C%22userTypeName%22%3A%22%E6%88%90%E4%BA%BA%E7%A5%A8%22%2C%22priceId%22%3A%2242122877%22%2C%22price%22%3A%22120%22%7D%2C%7B%22userType%22%3A%22URT002%22%2C%22userTypeName%22%3A%22%E5%B0%8F%E7%AB%A5%E7%A5%A8%22%2C%22priceId%22%3A%2242122887%22%2C%22price%22%3A%2270%22%7D%2C%7B%22userType%22%3A%22URT006%22%2C%22userTypeName%22%3A%22%E9%95%BF%E8%80%85%E7%A5%A8%22%2C%22priceId%22%3A%220%22%2C%22price%22%3A%220%22%7D%5D
+xunlongferry.weixin.swiftpass.cn	FALSE	/	FALSE		goSailing	%7B%22userType%22%3A%22member%22%2C%22sailingId%22%3A%2265271622%22%2C%22startDate%22%3A%222015-12-31%22%2C%22goTime%22%3A%2207%3A45%22%2C%22lineId%22%3A%22SK-HKM%22%2C%22shipName%22%3A%22%E8%BF%85%E9%9A%86%E4%BA%8C%E5%8F%B7%22%2C%22shipCode%22%3A%22XL2%22%2C%22orderFrom%22%3A%22ORI002%22%2C%22weekDay%22%3A%22%E5%91%A8%E5%9B%9B%22%2C%22seat%22%3A%7B%22seatType%22%3A%22STT001%22%2C%22seatTypeName%22%3A%22%E6%99%AE%E9%80%9A%E4%BD%8D%22%2C%22adultPrice%22%3A%22120%22%7D%7D
+xunlongferry.weixin.swiftpass.cn	FALSE	/	FALSE		siteResJson	%7B%22userType%22%3A%22member%22%2C%22startSite%22%3A%22SK%22%2C%22endSite%22%3A%22HKM%22%2C%22toDate%22%3A%222015-12-31%22%2C%22toDate2%22%3A%2212%E6%9C%8831%E6%97%A5%22%2C%22toWeek%22%3A%22%E5%91%A8%E5%9B%9B%22%2C%22backDate%22%3A%22%22%2C%22backDate2%22%3A%22%22%2C%22backWeek%22%3A%22%22%2C%22endSiteName%22%3A%22%E9%A6%99%E6%B8%AF%E6%B8%AF%E6%BE%B3%22%2C%22startSiteName%22%3A%22%E6%B7%B1%E5%9C%B3%E8%9B%87%E5%8F%A3%22%2C%22sailingType%22%3A%220%22%2C%22lineId%22%3A%22SK-HKM%22%2C%22airportTime%22%3Anull%2C%22toTime%22%3A%22%22%2C%22lineType%22%3A%22LTP001%22%7D
+xunlongferry.weixin.swiftpass.cn	FALSE	/	FALSE		redirect_path	/xunlong/pc/goSubmitOrder

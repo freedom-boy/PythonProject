@@ -2,7 +2,7 @@
 #_*_coding:utf-8_*_
 #author=Paul
 
-import json,urllib,urllib2,cookielib,datetime
+import json,urllib,urllib2,cookielib,datetime,Cookie
 
 class BookingTicket:
 
@@ -10,7 +10,7 @@ class BookingTicket:
 		self.keepLoginStatusUrl='http://xunlongferry.weixin.swiftpass.cn/xunlong/pc/user/isLogin'
 		self.loginUrl='http://xunlongferry.weixin.swiftpass.cn/xunlong/pc/user/login'
 		self.queryUrl='http://xunlongferry.weixin.swiftpass.cn/xunlong/pc/sailingsJson'
-		self.goqueryUrl=''
+
 		self.bookingUrl='http://xunlongferry.weixin.swiftpass.cn/xunlong/pc/submitOrder'
 		self.goSubmitOrderUrl='http://xunlongferry.weixin.swiftpass.cn/xunlong/pc/goSubmitOrder'
 		self.checkPayUrl='http://xunlongferry.weixin.swiftpass.cn/xunlong/pc/personCenter/orderList?currentPage=0&statusNo=0'
@@ -39,10 +39,16 @@ class BookingTicket:
 			    '5' : '周五',
 			    '6' : '周六',
 			  }
-		self.cookie=cookielib.CookieJar()  #cookie制作器
+
+		# self.cookie=cookielib.CookieJar()  #cookie制作器
+		# self.cookieHandler=urllib2.HTTPCookieProcessor(self.cookie)
+		# self.opener=urllib2.build_opener(self.cookieHandler)
+		# urllib2.install_opener(self.opener)
+
+		self.cookie=cookielib.MozillaCookieJar()  #cookie制作器
+		self.cookie.load('subcookies.txt',ignore_discard=True, ignore_expires=True)
 		self.cookieHandler=urllib2.HTTPCookieProcessor(self.cookie)
 		self.opener=urllib2.build_opener(self.cookieHandler)
-		urllib2.install_opener(self.opener)
 
 	def KeepLoginStatus(self,head):
 		keeploginRequest=urllib2.Request(url=self.keepLoginStatusUrl,data="",headers=head)
@@ -54,13 +60,16 @@ class BookingTicket:
 		loginData=urllib.urlencode(loginDataDict)
 		loginRequest=urllib2.Request(url=self.loginUrl,headers=self.loginHeaders,data=loginData)
 		try:
-			response=urllib2.urlopen(loginRequest,timeout=3)
+			response=self.opener.open(loginRequest)
+			#response=urllib2.urlopen(loginRequest,timeout=3)
+
 			return response.read()
 
 		except:
 			return "Login Error"
 
 	def Query(self,startSite,arriveSite,toDate,backDate=""):
+
 		toDateValue=toDate[0:4]+'-'+toDate[4:6]+'-'+toDate[6:8]
 		toDate2=toDate[4:6]+'月'+toDate[6:8]+'日'
 		toWeek=self.week_day_dict[str(datetime.datetime(int(toDate[0:4]),int(toDate[4:6]),int(toDate[6:8])).strftime("%w"))]
@@ -68,37 +77,35 @@ class BookingTicket:
 		arriveSiteStr=self.arriveSiteDict[arriveSite]
 		lindID=startSiteStr+'-'+arriveSiteStr
 		if backDate!="":
-			backDateValue=toDate[0:4]+'-'+toDate[4:6]+'-'+toDate[6:8]
+			backDateValue=backDate[0:4]+'-'+backDate[4:6]+'-'+backDate[6:8]
 			backDate2=toDate[4:6]+'月'+toDate[6:8]+'日'
 			backWeek=self.week_day_dict[str(datetime.datetime(int(toDate[0:4]),int(toDate[4:6]),int(toDate[6:8])).strftime("%w"))]
 		else:
 			backDateValue=""
 			backDate2=""
 			backWeek=""
+
+		queryStringDict={"userType":"member","sailingType":"0","toDate":toDateValue,"startSiteName":arriveSite,"endSiteName":startSite,"lineId":lindID,"startSite":startSiteStr,"endSite":arriveSiteStr}
 		queryDataDict={"userType":"member","startSite":startSiteStr,"endSite":arriveSiteStr,"toDate":toDateValue,"toDate2":toDate2,"toWeek":toWeek,"backDate":backDateValue,"backDate2":backDate2,"backWeek":backWeek,"endSiteName":startSite,"startSiteName":arriveSite,"sailingType":"0","lineId":lindID,"airportTime":"","toTime":"","lineType":"LTP001"}
 		queryData=urllib.urlencode({"siteResJson":queryDataDict})
-
+		queryString=urllib.urlencode({"siteResJson":queryStringDict})
+		goQueryUrl='http://xunlongferry.weixin.swiftpass.cn/xunlong/pc/sailings?'+queryString
+		# queryStringRequest=urllib2.Request(url=goQueryUrl,headers=self.loginHeaders)
+		# goqueryresponse=urllib2.urlopen(queryStringRequest)
+		urllib2.install_opener(self.opener)
 		queryRequest=urllib2.Request(url=self.queryUrl,headers=self.loginHeaders,data=queryData)
 		response=urllib2.urlopen(queryRequest)
-		return  queryData
 
-	def Booking(self,querydreferer):
-		gosubmitReferer='http://xunlongferry.weixin.swiftpass.cn/xunlong/pc/sailings?'+str(querydreferer)
-		gosubmitHeaders={
-			'Host': 'xunlongferry.weixin.swiftpass.cn',
-			'Connection': 'keep-alive',
-			'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-			'Upgrade-Insecure-Requests': '1',
-			'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36',
-			'Referer':gosubmitReferer,
-			#Accept-Encoding: gzip, deflate, sdch
-			'Accept-Language': 'zh-CN,zh;q=0.8'
-		}
+
+		return  response
+
+	def Booking(self):
+
 
 		submitHeader={
 			'Host': 'xunlongferry.weixin.swiftpass.cn',
 			'Connection': 'keep-alive',
-			'Content-Length': '167',
+			#'Content-Length': '9999',
 			'Accept': 'application/json, text/javascript, */*; q=0.01',
 			'Origin': 'http://xunlongferry.weixin.swiftpass.cn',
 			'X-Requested-With': 'XMLHttpRequest',
@@ -109,23 +116,38 @@ class BookingTicket:
 			'Accept-Language': 'zh-CN,zh;q=0.8'
 		}
 		#self.KeepLoginStatus(gosubmitHeaders)
-		goSubMitOrderRequest=urllib2.Request(self.goSubmitOrderUrl,headers=gosubmitHeaders)
-		goSubresponse=urllib2.urlopen(goSubMitOrderRequest)
+		goSubMitOrderRequest=urllib2.Request(url=self.goSubmitOrderUrl,headers=self.loginHeaders)
+		goSubresponse=self.opener.open(goSubMitOrderRequest)
 
 		#self.KeepLoginStatus(gosubmitHeaders)
 		goPricelist='[{"userType":"URT001","userTypeName":"成人票","price":"120","priceId":"42122877","discountId":"1"}]'
-		bookingDataDict={"vouchersCode":"","goPriceList":goPricelist,"backPriceList":"[]","userPhone":"18610817561"}
-		bookingData=urllib.urlencode(bookingDataDict)
+		#goPricelist=urllib.urlencode()
+
+		bookingData=urllib.urlencode({"vouchersCode":"","goPriceList":goPricelist,"backPriceList":"[]","userPhone":"18610817561"})
+		#bookingData=json.dumps({"vouchersCode":None,"goPriceList":goPricelist,"backPriceList":"[]","userPhone":"18610817561"})
+
+		print bookingData
 		bookingRequest=urllib2.Request(url=self.bookingUrl,headers=submitHeader,data=bookingData)
-		response=urllib2.urlopen(bookingRequest)
+		response=urllib2.urlopen(bookingRequest,timeout=5)
 		return response.read()
+
+	def Set_Cookie(self,oldCookies,newCookieDict):
+		cookieStrDict={}
+		for co in oldCookies:
+			cookieStrDict[co.name]=co.value
+
+		for k,v in newCookieDict.items:
+			cookieStrDict[k]=v
+
+
+
 
 
 
 	def StartRun(self):
-		userName=raw_input('please input your username:')
-		passWord=raw_input("please input your password:")
-		loginResult=self.Login(userName,passWord)
+		#userName=raw_input('please input your username:')
+		#passWord=raw_input("please input your password:")
+		#loginResult=self.Login(userName,passWord)
 		print '以下为出发站:'
 		for k,v in self.startSiteDict.items():
 			print k
@@ -136,7 +158,7 @@ class BookingTicket:
 		endSite=raw_input('please input your endSite:')
 		arrivedate=raw_input('please input your arrive date:')
 		queryResult=self.Query(startSite=startSite,arriveSite=endSite,toDate=arrivedate)
-		bookingResult=self.Booking(queryResult)
+		bookingResult=self.Booking()
 		print bookingResult
 		payRequest=urllib2.Request(url=self.checkPayUrl,headers=self.loginHeaders)
 		PayList=urllib2.urlopen(payRequest)
