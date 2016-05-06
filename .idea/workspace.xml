@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33402eb7-b243-4cb0-9ddb-b25e418b4110" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\GitRepository\learngit\PythonProject\Paul'sServices\Disney_Beta\DisneyGrabTickets.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\GitRepository\learngit\PythonProject\Paul'sServices\Disney_Beta\RequestFunctions.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\GitRepository\learngit\PythonProject\Paul'sServices\Disney_Beta\StartDisney.bat" afterPath="" />
-      <change type="DELETED" beforePath="E:\GitRepository\learngit\PythonProject\Paul'sServices\Disney_Beta\checkDisnsyRun.bat" afterPath="" />
-      <change type="DELETED" beforePath="E:\GitRepository\learngit\PythonProject\Paul'sServices\Disney_Beta\pay1.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Paul'sServices/ReleaseSystem/fabfile.py" />
+      <change type="DELETED" beforePath="E:\GitRepository\learngit\PythonProject\Paul'sServices\ReleaseSystem\runDeploy.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PythonProject.iws" />
@@ -30,15 +27,18 @@
     <SUITE FILE_PATH="coverage/PythonProject$GetTableData.coverage" NAME="GetTableData Coverage Results" MODIFIED="1447383663095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/Operations" />
     <SUITE FILE_PATH="coverage/PythonProject$e2goCheck.coverage" NAME="e2goCheck Coverage Results" MODIFIED="1452150291548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/Operations" />
     <SUITE FILE_PATH="coverage/PythonProject$12306WapCheck.coverage" NAME="12306WapCheck Coverage Results" MODIFIED="1459997727495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/12306Wap检测封ip专用" />
+    <SUITE FILE_PATH="coverage/PythonProject$DisneyGrabTickets__2_.coverage" NAME="DisneyGrabTickets (2) Coverage Results" MODIFIED="1462441363935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/Disney_Beta" />
     <SUITE FILE_PATH="coverage/PythonProject$DisneyShopTicket.coverage" NAME="DisneyShopTicket Coverage Results" MODIFIED="1460017270612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
     <SUITE FILE_PATH="coverage/PythonProject$DisneyGrab.coverage" NAME="DisneyGrab Coverage Results" MODIFIED="1460343912970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
+    <SUITE FILE_PATH="coverage/PythonProject$fabfile.coverage" NAME="fabfile Coverage Results" MODIFIED="1462434827760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices/ReleaseSystem" />
     <SUITE FILE_PATH="coverage/PythonProject$QueryTicket.coverage" NAME="QueryTicket Coverage Results" MODIFIED="1450417902551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/AdslGetdata" />
     <SUITE FILE_PATH="coverage/PythonProject$MainProgram.coverage" NAME="MainProgram Coverage Results" MODIFIED="1451532217207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/uuCloudCheckCode/bin" />
     <SUITE FILE_PATH="coverage/PythonProject$DisneyGrabTickets__1_.coverage" NAME="DisneyGrabTickets (1) Coverage Results" MODIFIED="1460622861414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices/Disney_Beta" />
     <SUITE FILE_PATH="coverage/PythonProject$ZhouYanchanghui.coverage" NAME="ZhouYanchanghui Coverage Results" MODIFIED="1460450106700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
+    <SUITE FILE_PATH="coverage/PythonProject$formatTable.coverage" NAME="formatTable Coverage Results" MODIFIED="1462418065723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/Operations" />
     <SUITE FILE_PATH="coverage/PythonProject$RecogoCheckImage.coverage" NAME="RecogoCheckImage Coverage Results" MODIFIED="1452069969317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/VoteScript" />
     <SUITE FILE_PATH="coverage/PythonProject$Recogn12306.coverage" NAME="Recogn12306 Coverage Results" MODIFIED="1453882173086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/python" />
-    <SUITE FILE_PATH="coverage/PythonProject$test.coverage" NAME="test Coverage Results" MODIFIED="1460000237791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/AdslGetdata" />
+    <SUITE FILE_PATH="coverage/PythonProject$test.coverage" NAME="test Coverage Results" MODIFIED="1461576376265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/AdslGetdata" />
     <SUITE FILE_PATH="coverage/PythonProject$LoginAccount.coverage" NAME="LoginAccount Coverage Results" MODIFIED="1446786450773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
     <SUITE FILE_PATH="coverage/PythonProject$ShopTrainTicket.coverage" NAME="ShopTrainTicket Coverage Results" MODIFIED="1447132011381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices" />
     <SUITE FILE_PATH="coverage/PythonProject$GrabTicket.coverage" NAME="GrabTicket Coverage Results" MODIFIED="1449228148285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/Operations" />
@@ -53,6 +53,7 @@
     <SUITE FILE_PATH="coverage/PythonProject$uuPythonDemo__1_.coverage" NAME="uuPythonDemo (1) Coverage Results" MODIFIED="1451549737789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/uuCloudCheckCode" />
     <SUITE FILE_PATH="coverage/PythonProject$ExecuteBackup.coverage" NAME="ExecuteBackup Coverage Results" MODIFIED="1446174257753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Python/Office/AdslGetdata" />
     <SUITE FILE_PATH="coverage/PythonProject$uuPythonDemo.coverage" NAME="uuPythonDemo Coverage Results" MODIFIED="1451033334443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/uuPythonDemo2014.6.7" />
+    <SUITE FILE_PATH="coverage/PythonProject$runDeploy.coverage" NAME="runDeploy Coverage Results" MODIFIED="1462433970807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Paul'sServices/ReleaseSystem" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -69,39 +70,35 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Python/Office/AdslGetdata/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="56304" max-vertical-offset="57247">
-              <caret line="2455" column="21" selection-start-line="2455" selection-start-column="21" selection-end-line="2455" selection-end-column="21" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6713" max-vertical-offset="7337">
+              <caret line="276" column="29" selection-start-line="276" selection-start-column="29" selection-end-line="276" selection-end-column="29" />
+              <folding>
+                <element signature="e#68#143#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShopTrainTicket.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Paul'sServices/ShopTrainTicket.py">
+      <file leaf-file-name="fabfile.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Paul'sServices/ReleaseSystem/fabfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334" vertical-offset="1715" max-vertical-offset="12788">
-              <caret line="87" column="16" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="16" />
-              <folding />
+            <state vertical-scroll-proportion="0.17692308" vertical-offset="69" max-vertical-offset="529">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#55#103#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginAccount.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Paul'sServices/LoginAccount.py">
+      <file leaf-file-name="DisneyGrabTickets.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python/Office/Disney_Beta/DisneyGrabTickets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1863" max-vertical-offset="2553">
-              <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZhouYanchanghui.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Paul'sServices/ZhouYanchanghui.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1338" max-vertical-offset="2231">
-              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2231" max-vertical-offset="5152">
+              <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
+              <folding>
+                <element signature="e#52#107#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,10 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Paul'sServices/LoginAccount.py" />
-        <option value="D:/Python/Office/AdslGetdata/Reboot.py" />
-        <option value="$PROJECT_DIR$/Paul'sServices/BookingSeat.py" />
-        <option value="$PROJECT_DIR$/LearnReptile/first.html" />
         <option value="$USER_HOME$/Desktop/QueryTicket.py" />
         <option value="D:/Python/Office/Operations/checkresult.txt" />
         <option value="D:/Python/Office/Operations/GetTableData.py" />
@@ -128,7 +121,6 @@
         <option value="$USER_HOME$/Desktop/linshi/ADSL代理机配置数据/apache/conf/extra/httpd-userdir.conf" />
         <option value="D:/Python/Office/Operations/config.ini.py" />
         <option value="$PROJECT_DIR$/Paul'sServices/TrainNumQuery.py" />
-        <option value="D:/Python/Office/test.py" />
         <option value="D:/Python/Office/Operations/config.ini" />
         <option value="D:/Python/Office/Operations/GrabTicket.py" />
         <option value="D:/Python/Office/AdslGetdata/CheckIpStatus.py" />
@@ -158,13 +150,18 @@
         <option value="$PROJECT_DIR$/Paul'sServices/RequestFunctions.py" />
         <option value="D:/Python/Office/12306Wap检测封ip专用/12306WapCheck.py" />
         <option value="$PROJECT_DIR$/Paul'sServices/DisneyTickets" />
-        <option value="D:/Python/Office/AdslGetdata/test.py" />
         <option value="$PROJECT_DIR$/Paul'sServices/DisneyGrab.py" />
         <option value="$PROJECT_DIR$/Paul'sServices/DisneyGrab2.py" />
         <option value="$PROJECT_DIR$/Paul'sServices/DisneyShopTicket.py" />
         <option value="$PROJECT_DIR$/Paul'sServices/DisneyGrabTickets.py" />
         <option value="$PROJECT_DIR$/Paul'sServices/ZhouYanchanghui.py" />
         <option value="$PROJECT_DIR$/Paul'sServices/Disney_Beta/DisneyGrabTickets.py" />
+        <option value="D:/Python/Office/test.py" />
+        <option value="D:/Python/Office/AdslGetdata/test.py" />
+        <option value="$PROJECT_DIR$/Paul'sServices/ReleaseSystem/runDeploy.py" />
+        <option value="D:/Python/Office/Operations/formatTable.py" />
+        <option value="$PROJECT_DIR$/Paul'sServices/ReleaseSystem/fabfile.py" />
+        <option value="D:/Python/Office/Disney_Beta/DisneyGrabTickets.py" />
       </list>
     </option>
   </component>
@@ -224,7 +221,53 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Office" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="PythonProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PythonProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PythonProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PythonProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Paul'sServices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PythonProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PythonProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Paul'sServices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ReleaseSystem" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -269,101 +312,101 @@
       <recent name="D:\Python\Office\XunLongShipTicket" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.DisneyGrabTickets (1)">
-    <configuration default="false" name="DisneyGrab" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.fabfile">
+    <configuration default="false" name="DisneyGrabTickets (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Paul'sServices" />
+      <option name="WORKING_DIRECTORY" value="D:/Python/Office/Disney_Beta" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PythonProject" />
+      <module name="LearningPython" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Paul'sServices/DisneyGrab.py" />
+      <option name="SCRIPT_NAME" value="D:/Python/Office/Disney_Beta/DisneyGrabTickets.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="ZhouYanchanghui" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Paul'sServices" />
+      <option name="WORKING_DIRECTORY" value="D:/Python/Office/AdslGetdata" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PythonProject" />
+      <module name="LearningPython" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Paul'sServices/ZhouYanchanghui.py" />
+      <option name="SCRIPT_NAME" value="D:/Python/Office/AdslGetdata/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="DisneyGrab2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="formatTable" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Paul'sServices" />
+      <option name="WORKING_DIRECTORY" value="D:/Python/Office/Operations" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PythonProject" />
+      <module name="LearningPython" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Paul'sServices/DisneyGrab2.py" />
+      <option name="SCRIPT_NAME" value="D:/Python/Office/Operations/formatTable.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="DisneyGrabTickets" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="runDeploy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Paul'sServices" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Paul'sServices/ReleaseSystem" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonProject" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Paul'sServices/DisneyGrabTickets.py" />
+      <option name="SCRIPT_NAME" value="E:\GitRepository\learngit\PythonProject\Paul'sServices\ReleaseSystem\fabfile.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="DisneyGrabTickets (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="fabfile" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Paul'sServices/Disney_Beta" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Paul'sServices/ReleaseSystem" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonProject" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Paul'sServices/Disney_Beta/DisneyGrabTickets.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Paul'sServices/ReleaseSystem/fabfile.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -570,19 +613,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.DisneyGrab" />
-      <item index="1" class="java.lang.String" itemvalue="Python.ZhouYanchanghui" />
-      <item index="2" class="java.lang.String" itemvalue="Python.DisneyGrab2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.DisneyGrabTickets" />
-      <item index="4" class="java.lang.String" itemvalue="Python.DisneyGrabTickets (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.DisneyGrabTickets (2)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.formatTable" />
+      <item index="3" class="java.lang.String" itemvalue="Python.runDeploy" />
+      <item index="4" class="java.lang.String" itemvalue="Python.fabfile" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.DisneyGrabTickets (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ZhouYanchanghui" />
-        <item index="2" class="java.lang.String" itemvalue="Python.DisneyGrabTickets" />
-        <item index="3" class="java.lang.String" itemvalue="Python.DisneyGrab2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.DisneyGrab" />
+        <item index="0" class="java.lang.String" itemvalue="Python.DisneyGrabTickets (2)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.fabfile" />
+        <item index="2" class="java.lang.String" itemvalue="Python.runDeploy" />
+        <item index="3" class="java.lang.String" itemvalue="Python.formatTable" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -605,17 +648,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1672" y="-8" width="1696" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294621" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37433156" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3764706" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6094132" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40106952" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1680929" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42673796" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.55187166" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16992664" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -675,21 +718,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Paul'sServices/ZhouYanchanghui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1196" max-vertical-offset="2185">
-          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Office/AdslGetdata/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28848347" vertical-offset="0" max-vertical-offset="877">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Office/Operations/config.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.103370786" vertical-offset="0" max-vertical-offset="890">
@@ -819,13 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python/Office/AdslGetdata/GetTrainData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4843205" vertical-offset="1151" max-vertical-offset="2622">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Paul'sServices/station.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38016528" vertical-offset="0" max-vertical-offset="225377">
@@ -903,20 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4877651" vertical-offset="0" max-vertical-offset="613">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Office/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26833335" vertical-offset="0" max-vertical-offset="600">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/linshi/check_proxy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39353612" vertical-offset="0" max-vertical-offset="526">
@@ -935,13 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0840164" vertical-offset="0" max-vertical-offset="667">
           <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Paul'sServices/DisneyTickets">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7636364" vertical-offset="5621" max-vertical-offset="12305">
-          <caret line="251" column="9" selection-start-line="251" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -980,27 +980,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python/Office/AdslGetdata/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="56304" max-vertical-offset="57247">
-          <caret line="2455" column="21" selection-start-line="2455" selection-start-column="21" selection-end-line="2455" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Paul'sServices/ZhouYanchanghui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1338" max-vertical-offset="2231">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Paul'sServices/Login.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.3627992" vertical-offset="1329" max-vertical-offset="4094">
           <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,7 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1863" max-vertical-offset="2553">
           <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,7 +998,95 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="1715" max-vertical-offset="12788">
           <caret line="87" column="16" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="16" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Office/AdslGetdata/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43314502" vertical-offset="0" max-vertical-offset="667">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Office/AdslGetdata/GetTrainData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59444445" vertical-offset="1289" max-vertical-offset="2622">
+          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Paul'sServices/ReleaseSystem/system.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="556">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Paul'sServices/ZhouYanchanghui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2953668" vertical-offset="1338" max-vertical-offset="2231">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Office/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12777779" vertical-offset="0" max-vertical-offset="540">
+          <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/linshi/aliyunadsl/CrtProNum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1495">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/linshi/aliyunadsl/Reboot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2254">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Office/Operations/formatTable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.84598213" vertical-offset="311" max-vertical-offset="828">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding>
+            <element signature="e#53#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Office/AdslGetdata/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6713" max-vertical-offset="7337">
+          <caret line="276" column="29" selection-start-line="276" selection-start-column="29" selection-end-line="276" selection-end-column="29" />
+          <folding>
+            <element signature="e#68#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Office/Disney_Beta/DisneyGrabTickets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2231" max-vertical-offset="5152">
+          <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
+          <folding>
+            <element signature="e#52#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Paul'sServices/ReleaseSystem/fabfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17692308" vertical-offset="69" max-vertical-offset="529">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#55#103#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
